@@ -16,6 +16,10 @@ updates:
       bun:
         patterns:
           - "*"
+      bun-security:
+        applies-to: "security-updates"
+        patterns:
+          - "*"
     ignore:
       # Ignore updates to obsidian beyond 1.4.11
       - dependency-name: "obsidian"
@@ -34,6 +38,10 @@ updates:
       github-actions:
         patterns:
           - "*"
+      github-actions-security:
+        applies-to: "security-updates"
+        patterns:
+          - "*"
 
   # Git submodules (gitmodules)
   - package-ecosystem: "gitsubmodule"
@@ -46,5 +54,9 @@ updates:
       include: "scope"
     groups:
       gitsubmodule:
+        patterns:
+          - "*"
+      gitsubmodule-security:
+        applies-to: "security-updates"
         patterns:
           - "*"
