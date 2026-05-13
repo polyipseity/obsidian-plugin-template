@@ -16,6 +16,12 @@ updates:
       bun:
         patterns:
           - "*"
+      bun-security:
+        applies-to: "security-updates"
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 5
     ignore:
       # Ignore updates to obsidian beyond 1.4.11
       - dependency-name: "obsidian"
@@ -36,6 +42,12 @@ updates:
       github-actions:
         patterns:
           - "*"
+      github-actions-security:
+        applies-to: "security-updates"
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 5
 
   # Git submodules (gitmodules)
   - package-ecosystem: "gitsubmodule"
@@ -50,3 +62,9 @@ updates:
       gitsubmodule:
         patterns:
           - "*"
+      gitsubmodule-security:
+        applies-to: "security-updates"
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 5

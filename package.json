@@ -4,8 +4,7 @@
     "url": "https://github.com/polyipseity/PLACEHOLDER"
   },
   "dependencies": {
-    "@polyipseity/obsidian-plugin-library": "^1.35.0",
-    "espree": "^11.1.1",
+    "@polyipseity/obsidian-plugin-library": "file:./vendor/obsidian-plugin-library",
     "i18next": "^25.8.13",
     "lodash-es": "^4.17.23",
     "obsidian": "~1.4.11",
@@ -23,7 +22,7 @@
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^25.3.3",
     "@types/semver": "^7.7.1",
-    "@vitest/coverage-v8": "^4.0.18",
+    "@vitest/coverage-istanbul": "^4.1.6",
     "builtin-modules": "^5.0.0",
     "esbuild": "^0.27.3",
     "esbuild-compress": "^2.2.0",
@@ -99,6 +98,7 @@
     "format:prettier": "prettier --cache --write \"**/*.{astro,cjs,css,csv,gql,graphql,hbs,html,js,jsx,json,json5,jsonc,jsonl,less,mjs,pcss,sass,scss,svelte,styl,ts,tsx,vue,xml,yaml,yml}\"",
     "obsidian:install": "bun run build && node scripts/obsidian-install.mjs",
     "obsidian:install:force": "bun run build:force && node scripts/obsidian-install.mjs",
+    "postinstall": "cd vendor/obsidian-plugin-library && bun install --frozen-lockfile --ignore-scripts && bun run build:force && cd ../..",
     "prepare": "bun x --package if-ci -- if-not-ci husky",
     "test": "bun run test:vitest",
     "test:vitest": "vitest run --coverage",
