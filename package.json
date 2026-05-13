@@ -4,7 +4,7 @@
     "url": "PLACEHOLDER"
   },
   "dependencies": {
-    "@polyipseity/obsidian-plugin-library": "^1.35.0",
+    "@polyipseity/obsidian-plugin-library": "file:./vendor/obsidian-plugin-library",
     "i18next": "^25.8.13",
     "lodash-es": "^4.17.23",
     "obsidian": "~1.4.11",
@@ -93,6 +93,7 @@
     "format:prettier": "prettier --cache --write \"**/*.{astro,cjs,css,csv,gql,graphql,hbs,html,js,jsx,json,json5,jsonc,jsonl,less,mjs,pcss,sass,scss,svelte,styl,ts,tsx,vue,xml,yaml,yml}\"",
     "obsidian:install": "bun run build && node scripts/obsidian-install.mjs",
     "obsidian:install:force": "bun run build:force && node scripts/obsidian-install.mjs",
+    "postinstall": "cd vendor/obsidian-plugin-library && bun install --frozen-lockfile --ignore-scripts && bun run build:force && cd ../..",
     "prepare": "bun x --package if-ci -- if-not-ci husky",
     "test": "bun run test:vitest",
     "test:vitest": "vitest run --coverage",
