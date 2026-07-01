@@ -13,7 +13,7 @@
   },
   "description": "PLACEHOLDER",
   "devDependencies": {
-    "@j178/prek": "^0.4.1",
+    "@j178/prek": "^0.4.5",
     "@changesets/cli": "^2.29.8",
     "@commitlint/cli": "^20.4.2",
     "@commitlint/config-conventional": "^20.4.2",
@@ -23,7 +23,7 @@
     "@types/node": "^25.3.3",
     "@types/semver": "^7.7.1",
     "@vitest/coverage-istanbul": "^4.1.6",
-    "builtin-modules": "^5.0.0",
+    "builtin-modules": "^5.2.0",
     "esbuild": "^0.27.3",
     "esbuild-compress": "^2.2.0",
     "esbuild-plugin-globals": "^0.2.0",
